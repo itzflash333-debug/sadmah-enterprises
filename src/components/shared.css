@@ -1,0 +1,103 @@
+.section-pad {
+  padding-right: max(56px, calc((100vw - 1328px) / 2));
+  padding-left: max(56px, calc((100vw - 1328px) / 2));
+}
+
+.eyebrow,
+.section-kicker,
+.clock-label,
+.image-caption,
+.card-category,
+.contact-form label {
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink-soft);
+}
+
+.eyebrow > span {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-kicker span {
+  color: var(--gold);
+}
+
+.hero h1,
+.about h2,
+.section-heading h2,
+.testimonials h2,
+.contact h2 {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.hero h1 em,
+.about h2 em,
+.section-heading h2 em,
+.testimonials h2 em,
+.contact h2 em {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.button {
+  min-height: 49px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 22px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.button span {
+  font-size: 17px;
+}
+
+@media (max-width: 1000px) {
+  .section-pad {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-pad {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 390px) {
+  .section-pad {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

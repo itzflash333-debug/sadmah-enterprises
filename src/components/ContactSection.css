@@ -1,0 +1,152 @@
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 12%;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  color: #f9f4e9;
+  background: var(--brown);
+}
+
+.contact .section-kicker {
+  color: #d8cbb7;
+}
+
+.contact h2 {
+  margin-top: 24px;
+  color: #fffaf1;
+  font-size: clamp(44px, 5vw, 68px);
+}
+
+.contact h2 em {
+  color: #d7b678;
+}
+
+.contact-intro > p {
+  max-width: 375px;
+  margin-top: 23px;
+  color: #d9d0c2;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.contact-note {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 46px;
+  color: #d9d0c2;
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.note-star {
+  color: #d7b678;
+  font-family: var(--sans);
+  font-size: 22px;
+}
+
+.contact-form {
+  padding-top: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin: 18px 0 10px;
+  color: #d7b678;
+  font-size: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid rgb(255 250 241 / 26%);
+  border-radius: 0;
+  outline: none;
+  color: #fffaf1;
+  background: transparent;
+  font: inherit;
+  font-size: 15px;
+  resize: vertical;
+  transition: border-color 180ms ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa092;
+}
+
+.contact-form input[type='file'] {
+  padding: 10px 0;
+  color: #d9d0c2;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.contact-form input[type='file']::file-selector-button {
+  margin-right: 12px;
+  padding: 8px 12px;
+  border: 1px solid rgb(255 250 241 / 26%);
+  color: #fffaf1;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d7b678;
+}
+
+.form-hint {
+  margin: 8px 0 0;
+  color: #aaa092;
+  font-size: 11px;
+}
+
+.button-light {
+  align-self: flex-start;
+  margin-top: 27px;
+  color: var(--brown);
+  background: #f9f4e9;
+}
+
+.button-light:hover {
+  color: #fffaf1;
+  border-color: #d7b678;
+  background: transparent;
+}
+
+.form-footnote {
+  margin-top: 2px;
+  color: #aaa092;
+  font-size: 11px;
+}
+
+@media (max-width: 1000px) {
+  .contact {
+    gap: 7%;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .contact h2 {
+    font-size: 52px;
+  }
+
+  .contact-note {
+    margin-top: 28px;
+  }
+}

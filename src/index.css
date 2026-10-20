@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+:root {
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', 'Segoe UI', sans-serif;
+  --bg: #f8f5ee;
+  --surface: #f0ece2;
+  --ink: #30241d;
+  --ink-soft: #776d61;
+  --line: #e4ded2;
+  --gold: #aa854d;
+  --gold-soft: #c8ae7e;
+  --brown: #30241d;
+  color: var(--ink);
+  background: var(--bg);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  scroll-behavior: smooth;
+}
+
+:root[data-theme='dark'] {
+  --bg: #1d1a17;
+  --surface: #27221d;
+  --ink: #f4eee2;
+  --ink-soft: #b9ad9d;
+  --line: #40372d;
+  --gold: #d1ae70;
+  --gold-soft: #89734e;
+  --brown: #171411;
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #1d1a17;
+    --surface: #27221d;
+    --ink: #f4eee2;
+    --ink-soft: #b9ad9d;
+    --line: #40372d;
+    --gold: #d1ae70;
+    --gold-soft: #89734e;
+    --brown: #171411;
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-size: 16px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+::selection {
+  color: #fffaf1;
+  background: #80663d;
+}
