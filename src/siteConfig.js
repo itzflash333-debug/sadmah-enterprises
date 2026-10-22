@@ -1,6 +1,9 @@
 import agbadaImage from './assets/catalog-agbada.jpg'
 import goldenHourImage from './assets/catalog-golden-hour.jpg'
 import modernClassicImage from './assets/catalog-modern-classic.jpg'
+import getznerImage from './assets/fabric-getzner.jpg'
+import menLaceImage from './assets/fabric-men-lace.jpg'
+import plainYardsImage from './assets/fabric-plain-yards.jpg'
 
 export const siteConfig = {
   email: 'itzflash333@gmail.com',
@@ -26,6 +29,26 @@ export const siteConfig = {
       image: modernClassicImage,
       alt: 'A modern patterned shirt and white trousers laid out together',
       category: '03 — Made to measure',
+    },
+  ],
+  fabrics: [
+    {
+      name: "Men's Lace",
+      description: 'Contact us to ask about colours, availability, and pricing.',
+      image: menLaceImage,
+      alt: "Men's lace fabric",
+    },
+    {
+      name: 'Getzner',
+      description: 'Contact us to ask about colours, availability, and pricing.',
+      image: getznerImage,
+      alt: 'Getzner fabric',
+    },
+    {
+      name: 'Plain Yards',
+      description: 'Contact us to ask about colours, availability, and pricing.',
+      image: plainYardsImage,
+      alt: 'Plain fabric yards',
     },
   ],
   testimonials: [
