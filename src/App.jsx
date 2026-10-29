@@ -4,10 +4,12 @@ import { AboutSection } from './components/AboutSection.jsx'
 import { CatalogSection } from './components/CatalogSection.jsx'
 import { ContactSection } from './components/ContactSection.jsx'
 import { Footer } from './components/Footer.jsx'
+import { GallerySection } from './components/GallerySection.jsx'
 import { Header } from './components/Header.jsx'
 import { HeroSection } from './components/HeroSection.jsx'
 import { TestimonialsSection } from './components/TestimonialsSection.jsx'
 import { WhatsAppButton } from './components/WhatsAppButton.jsx'
+import { AdminDashboard } from './components/AdminDashboard.jsx'
 import './components/shared.css'
 
 function getSavedTheme() {
@@ -62,6 +64,7 @@ function HomePage() {
       <HeroSection />
       <AboutSection />
       <CatalogSection />
+      <GallerySection />
       <TestimonialsSection />
       <ContactSection />
     </main>
@@ -69,6 +72,20 @@ function HomePage() {
 }
 
 function SiteLayout({ isDark, onToggleTheme }) {
+  const { pathname } = useLocation()
+
+  if (pathname.startsWith('/admin')) {
+    return (
+      <Routes>
+        <Route
+          path="/admin/*"
+          element={<AdminDashboard isDark={isDark} onToggleTheme={onToggleTheme} />}
+        />
+        <Route path="*" element={<Navigate to="/admin" replace />} />
+      </Routes>
+    )
+  }
+
   return (
     <>
       <ScrollToTop />
